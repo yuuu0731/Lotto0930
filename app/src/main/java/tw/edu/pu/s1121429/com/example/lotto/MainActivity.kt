@@ -1,11 +1,13 @@
 package tw.edu.pu.s1121429.com.example.lotto
 
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,5 +21,9 @@ class MainActivity : AppCompatActivity() {
         }
         var txv: TextView = findViewById(R.id.txv)
         txv.text = "0"
+    }
+    fun happy(v : View){
+        var txv:TextView = findViewById(R.id.txv)
+        txv.text=(1..100).random().toString()
     }
 }
